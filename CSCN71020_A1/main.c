@@ -17,15 +17,23 @@ void main() {
 	printf("Enter operation number: ");
 	scanf_s("%1o", &inputNum);
 
-	switch (inputNum)
+	while (inputNum <= 2)
 	{
-	case 1:
-		add();
-	
-		case 2:
+		if (inputNum == 1)
+		{
+			add();
+			printOptions();
+			printf("Enter operation number: ");
+			scanf_s("%1o", &inputNum);
+		}
+		else if(inputNum == 2)
+		{
 			subtract();
+			printf("Enter operation number: ");
+			scanf_s("%1o", &inputNum);
+			
+		}
 	}
-
 }
 
 void printWelcomeMenu() {
